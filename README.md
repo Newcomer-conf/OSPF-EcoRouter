@@ -49,6 +49,8 @@ ABR(config)#port ge0
 ABR(config-port)#service-instance int1/ge0
 ABR(config-service-instance)#encapsulation untagged
 ABR(config-service-instance)#connect ip interface int1
+ABR(config-service-instance)#exit
+ABR(config-port)#exit
 ```
 Порт ge1 для int2
 ```bash
@@ -56,6 +58,8 @@ ABR(config)#port ge1
 ABR(config-port)#service-instance int2/ge1
 ABR(config-service-instance)#encapsulation untagged
 ABR(config-service-instance)#connect ip interface int2
+ABR(config-service-instance)#exit
+ABR(config-port)#exit
 ```
 Порт ge2 для int3
 ```bash
@@ -63,6 +67,8 @@ ABR(config)#port ge2
 ABR(config-port)#service-instance int3/ge2
 ABR(config-service-instance)#encapsulation untagged
 ABR(config-service-instance)#connect ip interface int3
+ABR(config-service-instance)#exit
+ABR(config-port)#exit
 ```
 
 ### Шаг 5: Сохранение конфигурации
@@ -102,6 +108,8 @@ R1(config)#port ge0
 R1(config-port)#service-instance int1/ge0
 R1(config-service-instance)#encapsulation untagged
 R1(config-service-instance)#connect ip interface int1
+R1(config-service-instance)#exit
+R1(config-port)#exit
 ```
 Порт ge1 для int2
 ```bash
@@ -109,6 +117,8 @@ R1(config)#port ge1
 R1(config-port)#service-instance int2/ge1
 R1(config-service-instance)#encapsulation untagged
 R1(config-service-instance)#connect ip interface int2
+R1(config-service-instance)#exit
+R1(config-port)#exit
 ```
 
 ### Шаг 4: Сохранение конфигурации
@@ -153,6 +163,8 @@ R2(config)#port ge0
 R2(config-port)#service-instance int1/ge0
 R2(config-service-instance)#encapsulation untagged
 R2(config-service-instance)#connect ip interface int1
+R2(config-service-instance)#exit
+R2(config-port)#exit
 ```
 Порт ge1 для int2
 ```bash
@@ -160,6 +172,8 @@ R2(config)#port ge1
 R2(config-port)#service-instance int2/ge1
 R2(config-service-instance)#encapsulation untagged
 R2(config-service-instance)#connect ip interface int2
+R2(config-service-instance)#exit
+R2(config-port)#exit
 ```
 
 ### Шаг 5: Сохранение конфигурации
@@ -194,6 +208,7 @@ R3(config)#router ospf 1
 R3(config-router)#network 73.24.93.0/30 area 2.2.2.2
 R3(config-router)#network 10.10.20.0/24 area 2.2.2.2
 R3(config-router)#exit
+
 ```
 R3 находится в области 2.2.2.2 и обменивается маршрутами с ABR.
 
@@ -204,6 +219,8 @@ R3(config)#port ge0
 R3(config-port)#service-instance int1/ge0
 R3(config-service-instance)#encapsulation untagged
 R3(config-service-instance)#connect ip interface int1
+R3(config-service-instance)#exit
+R3(config-port)#exit
 ```
 Порт ge1 для int2
 ```bash
@@ -211,6 +228,8 @@ R3(config)#port ge1
 R3(config-port)#service-instance int2/ge1
 R3(config-service-instance)#encapsulation untagged
 R3(config-service-instance)#connect ip interface int2
+R3(config-service-instance)#exit
+R3(config-port)#exit
 ```
 
 ### Шаг 5: Сохранение конфигурации
